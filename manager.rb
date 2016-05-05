@@ -39,8 +39,14 @@ class Manager < Employee
   attr_accessor :employees
 
   def initialize(input_options)
-    super(input_options) # this is where the method from super class is run 
+    super(input_options) # this is where the method from super class is run
     @employees = input_options[:employees]
+  end
+
+  def send_report
+    puts "sending email..."
+    #codethat send email
+    puts "Email sent"
   end
 
 end
@@ -55,5 +61,5 @@ active: true,
 employees: [employee1, employee2]
 )
 
-p employee3.first_name
 p employee3.employees[1].first_name
+employee3.send_report
