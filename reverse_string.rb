@@ -2,14 +2,25 @@
 # returns the reverse. The one caveat: Don't use the reverse method that already
 # comes with Ruby!
 
+# def reverse_a_string(string)
+#   word_length = string.length # 5
+#   rev_string = ""
+#   while word_length > 0
+#     word_length -= 1
+#     rev_string = rev_string + string[word_length]
+#   end
+#   rev_string
+# end
+
+# Alternative Solution
 def reverse_a_string(string)
-  word_length = string.length # 5
-  rev_string = ""
-  while word_length > 0
-    word_length -= 1
-    rev_string = rev_string + string[word_length]
+  reversed_string = []
+  string_array = string.split("")
+  string_array.each do |letter|
+    reversed_string = [letter] + reversed_string
+    reversed_string
   end
-  rev_string
+  reversed_string.join("")
 end
 
 # Driver code - don't touch anything below this line.
